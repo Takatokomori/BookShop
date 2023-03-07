@@ -12,6 +12,6 @@ class BookmarkSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Bookmark::factory(100)->create();
     }
 }

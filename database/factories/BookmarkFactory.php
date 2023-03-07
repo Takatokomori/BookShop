@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\Bookmark;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +18,9 @@ class BookmarkFactory extends Factory
     {
         return [
             //
+            "title" => fake()->title(),
+            "url" => fake()->url(),
+            "description" => fake()->realText(fake()->numberBetween(50, 255)),
         ];
     }
 }
